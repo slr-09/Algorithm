@@ -2,14 +2,8 @@ from collections import deque
 def solution(maps):
     
     def bfs(x,y,zx,zy):
-        # graph=[[] for _ in range(len(maps))]
         visited=[[False]*len(maps[0]) for _ in range(len(maps))]
-        # for i in range(len(maps)):
-        #     for j in range(len(maps[0])):
-        #         if maps[i][j] == 'X':
-        #             graph[i].append(-1)
-        #         else:
-        #             graph[i].append(0)
+        
         queue=deque()
         queue.append((x,y,0))
         while queue:
@@ -25,7 +19,6 @@ def solution(maps):
                     continue
                 else:
                     if not visited[nx][ny]:
-                        # graph[nx][ny] = graph[x][y] + 1
                         queue.append((nx,ny,cost+1))
                         visited[nx][ny] = True
             
