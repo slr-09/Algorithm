@@ -8,10 +8,8 @@ def solution(s, skip, index):
     
     for i in range(len(s)):
         idx = alpha.index(s[i])
-        if idx+index >= len(alpha):
-            idx = (idx+index)%len(alpha)
-        else:
-            idx += index
+        idx = (idx+index)%len(alpha)
+        
         answer += alpha[idx]
         
     return answer
