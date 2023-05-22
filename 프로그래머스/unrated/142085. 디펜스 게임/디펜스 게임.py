@@ -16,6 +16,7 @@ def solution(n, k, enemy):
     for i in range(len(enemy)):
         num += enemy[i]
         heapq.heappush(heap,-enemy[i])
+        # num이 n과 같을 때는 넘어가야 함 
         if num > n and k>0:
             num += heapq.heappop(heap)
             k -= 1
