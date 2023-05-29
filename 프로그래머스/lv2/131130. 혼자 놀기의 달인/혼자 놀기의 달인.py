@@ -18,7 +18,7 @@ def solution(cards):
         cards[idx] = 0
         idx = x-1
         
-        number.remove(idx)
+        number.remove(idx) 
         num += 1
         
     group.sort(reverse=True)
